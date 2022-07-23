@@ -1,7 +1,21 @@
 {
-  "name": "gitnote",
+  "name": "gitmark",
+  "description": "A simple CLI that allows you to create git commits and add remarks about these on your Notion page",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
+  "main": "./lib/index.js",
+  "author": "robertokbr",
   "license": "MIT",
-  "type": "module"
+  "scripts": {
+    "migration:run": "knex  --knexfile knexfile.js migrate:latest"
+  },
+  "dependencies": {
+    "command-line-args": "^5.2.1",
+    "knex": "^2.2.0",
+    "sqlite3": "^5.0.10"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "gm": "./bin/gm.js"
+  }
 }
