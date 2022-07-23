@@ -1,1 +1,0 @@
-console.log('[master (root-commit) a537741]'.match(/\[.*]/));
